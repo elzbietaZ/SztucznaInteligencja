@@ -29,7 +29,7 @@ public class Greedy {
 	}
 	
 	public void prepareResultProject() {
-		System.out.println("prepare "+resultProject.getAllResourceAssignments().size());
+//		System.out.println("prepare "+resultProject.getAllResourceAssignments().size());
 		int size=resultProject.getAllResourceAssignments().size();
 		for(int i=0; i<size; i++) {
 			resultProject.getAllResourceAssignments().get(0).remove();
@@ -50,9 +50,9 @@ public class Greedy {
 	//dzia³a
 	public void basicGreedyWithCo() {
 		printInfo(project);
+		System.out.println();
 
 		System.out.println("Optymalizacja po koszcie: ");
-		System.out.println("size"+resultProject.getAllTasks().size());
 		resultProject.getAllTasks().remove(0);
 		int taskSize=resultProject.getAllTasks().size();
 		int i=0;
@@ -98,8 +98,8 @@ public class Greedy {
 		
 	}
 	public void basicGreedyWithDo() {
+		System.out.println();
 		System.out.println("Optymalizacja po czasie: ");
-		System.out.println("size"+resultProjectDO.getAllTasks().size());
 		resultProjectDO.getAllTasks().remove(0);
 		int taskSize=resultProjectDO.getAllTasks().size();
 		int i=0;

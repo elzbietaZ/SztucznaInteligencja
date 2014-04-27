@@ -18,8 +18,9 @@ public class PrepareData {
 	public static ProjectFile project;
 	public static ProjectFile resultProject;
 	public static ProjectFile resultProjectDO;
+	public static ProjectFile BNBproject;
 
-	String s="C:/Users/El¿bieta/Desktop/Sztuczna/D0/200_40_130_9_D4.mpp";
+	static String s="C:/Users/El¿bieta/Desktop/Sztuczna/D0/100_20_23_9_D1.mpp";
 
 
 	
@@ -27,6 +28,7 @@ public class PrepareData {
 		project= new MPPReader().read(s);
 		resultProject=new MPPReader().read(s);
 		resultProjectDO=new MPPReader().read(s);
+		BNBproject=new MPPReader().read(s);
 
 	}
 	
@@ -40,6 +42,7 @@ public class PrepareData {
 	public void writeToFile() throws IOException {
 		new MSPDIWriter().write(resultProject, s+"Wynik.xml");
 		new MSPDIWriter().write(resultProjectDO, s+"WynikDO.xml");
+
 	}
 
 
@@ -92,4 +95,6 @@ public class PrepareData {
 		}
 		}
 	}
+	
+	
 }
